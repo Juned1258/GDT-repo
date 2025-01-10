@@ -53,7 +53,6 @@ resource "aws_iam_role_policy_attachment" "vpc_access_policy" {
 resource "aws_lambda_function" "my_lambda_funtion" {
   function_name = "ecr-task-function"
   role          = "arn:aws:iam::585008073446:role/lambda_access_role"
-  runtime = "provided.al2"
   image_uri = "585008073446.dkr.ecr.ap-south-1.amazonaws.com/gdt-repo:latest"
   package_type = "Image"
 }
